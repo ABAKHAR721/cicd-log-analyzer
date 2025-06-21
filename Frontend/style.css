@@ -1,0 +1,120 @@
+:root {
+  --bg: #f9f9f9;
+  --text: #222;
+  --card: #fff;
+  --accent: #32c48d;
+  --border: #ccc;
+}
+
+.dark {
+  --bg: #1e1e1e;
+  --text: #eee;
+  --card: #2e2e2e;
+  --accent: #50fa7b;
+  --border: #444;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--card);
+  color: var(--text);
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.file-label,
+button {
+  background: var(--accent);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.file-label:hover,
+button:hover {
+  opacity: 0.9;
+}
+
+.result-grid {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.result-card {
+  flex: 1;
+  min-width: 300px;
+  background: var(--card);
+  padding: 1.5rem;
+  border-left: 6px solid var(--accent);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+}
+
+.result-card h2 {
+  margin-top: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.extras {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+#loading-message {
+  font-style: italic;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: #777;
+  text-align: center;
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+strong {
+  font-weight: bold;
+}

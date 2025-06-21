@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Log Analyzer</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- In your HTML <head> -->
+  <script src="https://unpkg.com/jspdf@2.5.1/dist/polyfills.umd.min.js"></script>
+
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🤖 Smart Log Analyzer</h1>
+      <button id="toggle-mode">🌙 Dark Mode</button>
+    </header>
+
+    <textarea id="log-input" placeholder="Paste or drop your CI/CD logs here..."></textarea>
+
+    <div class="actions">
+      <label class="file-label">
+        📂 Upload Log File
+        <input type="file" id="file-upload" hidden />
+      </label>
+      <button id="analyze-btn">🧠 Analyze Logs</button>
+    </div>
+
+    <div class="extras">
+      <button id="speak-summary">🎤 Speak</button>
+      <button id="stop-summary">🛑 Stop</button>
+      <button id="export-pdf">📄 Export PDF</button>
+    </div>
+
+    <div id="loading-message" class="hidden">
+      <p>⏳ Please wait while the AI generates your report...</p>
+    </div>
+
+    <section id="results-section" class="hidden result-grid">
+      <div class="result-card explanation">
+        <h2>📄 Explanation</h2>
+        <div id="explanation-output"></div>
+      </div>
+      <div class="result-card fix">
+        <h2>🛠 Suggested Fix</h2>
+        <div id="fix-output"></div>
+      </div>
+    </section>
+
+    <footer>
+      © 2025 Smart Log Analyzer • Made with ❤️
+    </footer>
+  </div>
+
+  <script src="/static/script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>
